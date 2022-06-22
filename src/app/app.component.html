@@ -1,19 +1,27 @@
 <div class="d-flex flex-column min-vh-100">
-  <nav class="navbar navbar-light bg-light nav">
+  <nav class="navbar navbar-light bg-light nav col-12 h-auto">
     <div class="container-fluid">
-      <a class="navbar-brand">FANDIT Movies</a>
-      <form class="d-flex">
-        <input matInput class="form-control me-2" type="search" placeholder="Película">
-        <button matSuffix class="btn btn-outline-light button" type="submit">Buscar</button>
-      </form>
-    </div>
+      <a class="navbar-brand text-uppercase" href="#">Movienema</a>
+        <form class="d-flex mt-1 mt-lg-0 mt-sm-0 mt-md-0" (ngSubmit)="searchMovie()">
+          <input id="movieSearch" [(ngModel)]="movieSearch" [ngModelOptions]="{standalone: true}" class="form-control me-2 italic" type="search" placeholder="Spiderman..." >
+          <button id="buttonSeacrh" class="btn btn-outline-light button" type="submit">Buscar</button>
+        </form>
+      </div>
   </nav>
+
+  <div *ngIf="this.component" class="mt-5 table">
+    <table class="col-12 mt-lg-1 mt-sm-1 mt-md-1 mt-3 padding">
+      <tr *ngFor="let movie of movies" (click)="goToDetail(movie.id)">
+        <td>{{movie.title}}</td>
+      </tr>
+    </table>
+  </div>
 
   <router-outlet></router-outlet>
 
-  <footer class="mt-auto">
+  <footer class="mt-auto col-12 w-auto">
     <div class="footer">
-      <p>Creado por <a href="https://github.com/ainaraRT" target="_blank">Ainara Ramos Toledo</a> para FANDIT</p>
+      <p>Creado por <a href="https://github.com/ainaraRT" target="_blank">Ainara Ramos Toledo</a> para FANDIT Movies</p>
     </div>
   </footer>
 </div>

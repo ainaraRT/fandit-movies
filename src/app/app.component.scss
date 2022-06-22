@@ -1,6 +1,6 @@
 .footer {
     margin: auto;
-    width: auto;
+    width: 100%;
     height: 5em;
     background-color: #1B4965;
     display: flex;
@@ -21,10 +21,18 @@
 }
 
 .nav {
+    height: 5em;
     background-color: #1B4965 !important;
+    position: fixed;
+    z-index: 2;
+
     a {
         color: #62B6CB;
         font-weight: bold;
+    }
+
+    form {
+        margin-right: 10px;
     }
 
     .button:hover {
@@ -34,4 +42,29 @@
     .button {
         border-color: #5FA8D3;
     }
+}
+
+input {
+    background-color: #CAE9FF;
+}
+
+.italic::placeholder {
+    font-style: italic;
+}
+
+.table {
+    position: absolute;
+    z-index: 1;
+        tr{
+            background-color: #5FA8D3;
+            color: white;
+            border: ridge #1B4965;
+        }
+    
+    }
+
+
+router-outlet {
+    margin-top: 70px;
+    z-index: 0;
 }
