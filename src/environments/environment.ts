@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  URL: 'https://www.themoviedb.org/movie'
+  URL: 'https://api.themoviedb.org/3/'
 };
 
 /*
