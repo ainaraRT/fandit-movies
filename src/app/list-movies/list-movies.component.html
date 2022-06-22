@@ -1,0 +1,15 @@
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 cardList">
+  <div class="col" *ngFor="let movie of movies">
+    <div class="card mt-5 mx-auto mb-3" (click)="goToDetail(movie.id)">
+      <img src="{{movie.poster_path}}" class="card-img-top img">
+      <div class="card-body">
+        <h4 class="card-title">{{movie.title}}</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row row-cols-auto mt-5 mb-5">
+  <button class="btn mx-auto btn-outline-primary button" [disabled]="this.page == 1" type="button" (click)="previousPage()"><< Anterior</button>
+  <button class="btn mx-auto btn-outline-primary button" type="button" (click)="nextPage()">Siguiente >></button>
+</div>

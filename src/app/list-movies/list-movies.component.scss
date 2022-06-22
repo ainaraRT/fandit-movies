@@ -1,0 +1,26 @@
+.cardList {
+    .card {
+    width: 200px;
+    height: 350px;
+
+    .card-body {
+        background-color: #5FA8D3;
+        
+        h4 {
+            color: white;
+            font-weight: medium;
+            text-align: center;
+            margin: auto;
+        }
+    }
+}
+}
+
+.button:hover {
+    background-color: #1B4965;
+    color: #CAE9FF;
+}
+.button {
+    border-color: #1B4965;
+    color: #1B4965;
+}
