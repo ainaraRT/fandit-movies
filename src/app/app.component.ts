@@ -12,9 +12,7 @@ export class AppComponent{
   title = 'fanditMovies';
 
   movies!: MovieList[];
-  titleMovie: any;
   page: number = 1;
-  query!: string;
   movieSearch!: string;
 
   component: boolean = true;
@@ -26,8 +24,12 @@ export class AppComponent{
     
   }
 
+  //Searching movies when you type something
   searchMovie(): any{
+    this.component = true
     console.log(this.movieSearch)
+
+    //Service to show all the movies with the reference you write
     this.movieService.searchMovie(this.page, this.movieSearch).subscribe(
       myMovies => {
         this.page = myMovies.page
@@ -37,6 +39,7 @@ export class AppComponent{
       });
   }
 
+  //Go to the information of the movie
   goToDetail(id: string) {
     console.log("CLICK")
     this.movieService.getDetail(id).subscribe(myMovies => {
@@ -45,6 +48,7 @@ export class AppComponent{
     })
   }
 
+  //Function to hide all the movies of the search bar
   hideComponent() {
     this.component = false
   }
