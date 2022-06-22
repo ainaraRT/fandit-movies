@@ -3,13 +3,13 @@
     <div class="container-fluid">
       <a class="navbar-brand text-uppercase" href="#">Movienema</a>
         <form class="d-flex mt-1 mt-lg-0 mt-sm-0 mt-md-0" (ngSubmit)="searchMovie()">
-          <input id="movieSearch" [(ngModel)]="movieSearch" [ngModelOptions]="{standalone: true}" class="form-control me-2 italic" type="search" placeholder="Spiderman..." >
+          <input id="movieSearch" [(ngModel)]="movieSearch" [ngModelOptions]="{standalone: true}" class="form-control me-2 italic" type="search" placeholder="Buscar por título..." >
           <button id="buttonSeacrh" class="btn btn-outline-light button" type="submit">Buscar</button>
         </form>
       </div>
   </nav>
 
-  <!-- Cards with the movies -->
+  <!-- Search bar with the movies -->
   <div *ngIf="this.component == true" class="mt-5 table">
     <table class="col-12 mt-lg-1 mt-sm-1 mt-md-1 mt-3 padding">
       <tr *ngFor="let movie of movies" (click)="goToDetail(movie.id)">
