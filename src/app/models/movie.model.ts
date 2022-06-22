@@ -1,3 +1,4 @@
+//Model of the movie's information
 export class MovieModel {
     public title: string;
     public release_date: string;
@@ -22,6 +23,8 @@ export class MovieModel {
     }
 }
 
+
+//Model of the list with the movies
 export class MovieList {
     public title: string;
     public poster_path: string;

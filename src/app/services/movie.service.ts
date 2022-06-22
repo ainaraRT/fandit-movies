@@ -17,9 +17,9 @@ export class MovieService {
 
   constructor(
     private http: HttpClient,
-    private route: Router,
   ) { }
 
+  // GET - Movies now playing
   getList(page: number): Observable<any> {
     let url = `${environment.URL}movie/now_playing?language=es&api_key=${API_KEY}&page=${page}&sort_by=release_date.desc`;
     return this.http.get<any>(url).pipe(
@@ -30,10 +30,13 @@ export class MovieService {
     )
   }
 
+
+  // Set the list of the movies
   setList(myMovies: MovieList[]) {
     this.movies = myMovies;
   }
 
+  // GET - Movie information
   getDetail(id: string | null): Observable<any> {
     let url = `${environment.URL}movie/${id}?api_key=${API_KEY}&language=es`;
     return this.http.get<any>(url).pipe(
@@ -43,6 +46,8 @@ export class MovieService {
     )
   }
 
+
+  // GET - Search movies
   searchMovie(page: number, query: string) {
     let url = `${environment.URL}search/movie?api_key=${API_KEY}&language=es&query=${query}&page=${page}`;
     return this.http.get<any>(url).pipe(
