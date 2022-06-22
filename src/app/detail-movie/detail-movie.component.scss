@@ -1,0 +1,86 @@
+.button:hover {
+    background-color: #1B4965;
+    color: #CAE9FF;
+}
+.button {
+    background-color: #1B4965;
+    border: none;
+    color: #CAE9FF;
+}
+
+.poster {
+    float: left;
+    width: 25%;
+}
+
+.information {
+    float: right;
+    width: 75%;
+}
+
+.img {
+    width: 227px;
+    height: 320px;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+    .poster {
+        float: left;
+        width: 15%;
+    }
+    
+    .information {
+        float: right;
+        width: 85%;
+        padding-left: 150px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 590px) {
+    .poster {
+        float: left;
+        width: 10%;
+    }
+    
+    .information {
+        float: right;
+        width: 90%;
+        padding-left: 190px;
+    }
+}
+
+@media (max-width: 589px) and (min-width: 321px) {
+    .poster {
+        margin-left: 20%;
+    }
+
+    .information {
+        padding-top: 30px;
+        margin-right: 60px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 375px) and (min-width: 321px) {
+    .poster {
+        margin-left: 15%;
+    }
+
+    .information {
+        padding-top: 30px;
+        margin-right: 60px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (width: 320px) {
+    .poster {
+        margin-left: 10%;
+    }
+
+    .information {
+        padding-top: 30px;
+        margin-right: 60px;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,22 @@
+<div class="container">
+    <button class="btn mx-auto btn-outline-primary button mb-3 mt-5 mt-lg-4 mt-md-4 mt-sm-4" type="button" (click)="goBack()">Volver</button>
+    <div class="mb-2">
+        <h1 class="text-center fw-bold text-uppercase">{{movie.title}}</h1>
+        <h3 class="text-center fst-italic">{{movie.tagline}}</h3>
+        <hr>
+    </div>
+    <div class="mx-auto mt-lg-3">
+        <div class="poster">
+            <img class="img" src="{{movie.poster_path}}">
+        </div>
+        <div class="information">
+            <p><i> Título orginal: <b>{{movie.original_title}}</b></i></p>
+            <h3><b><u>Sinopsis</u></b></h3>
+            <p>{{movie.overview}}</p>
+            <p>Fecha de estreno: <b>{{movie.release_date}}</b></p>
+            <p>Duración: <b>{{movie.runtime}} minutos</b></p>
+            <p>Valoración: <b>{{movie.vote_average}}</b></p>
+        </div>
+    </div>
+    
+</div>
